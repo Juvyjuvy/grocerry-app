@@ -1,0 +1,106 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styles */
+header {
+  display: flex;
+  justify-content: center; /* Center the h1 */
+  align-items: center;
+  padding: 0;
+  background: #fbec04;
+  background-size: cover; /* Ensures the GIF covers the entire header */
+  background-position: center;
+  text-align: center;
+  height: 60px; /* Adjust the header height */
+  position: relative; /* To allow absolute positioning of back button */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.9em; /* Adjust the size of the text here */
+  color: #ffffff;
+  font-weight: bold; /* Fixed the font style issue */
+}
+
+/* Back button styles */
+.back-btn {
+  position: absolute;
+  left: 10px; /* Keeps the back button on the left */
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.back-btn:hover {
+  color: black; /* Lighter hover color for the button */
+}
+
+/* Cart styles */
+.cart {
+  margin-top: 30px;
+  padding: 0 10px; /* Added padding for better spacing on small screens */
+}
+
+.cart ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.cart li {
+  padding: 5px 0; /* Added more padding for better readability */
+  border-bottom: 2px solid #ddd;
+  font-size: 1em;
+  display: flex; /* Make the item and buttons appear inline */
+  justify-content: space-evenly; /* Space between item and buttons */
+  align-items: center; /* Center items vertically */
+}
+
+.cart-total {
+  text-align: right;
+  font-size: 12px;
+  padding: 10px;
+  border-top: 2px solid #ddd;
+  margin-top: 10px;
+}
+
+/* Remove button */
+.remove-btn {
+  background-color: #fbec04;
+  color: white;
+  border: none;
+  padding: 5px 10px; /* Added some padding for a better button size */
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.remove-btn:hover {
+  background-color: black;
+}
+
+/* Style for scratched item */
+.scratched {
+  text-decoration: line-through;
+  color: black;
+}
+
+/* Small screen adjustments */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.6em;
+  }
+
+  .cart li {
+    font-size: 0.9em;
+  }
+
+  .remove-btn {
+    font-size: 0.8em;
+    padding: 4px 8px;
+  }
+}

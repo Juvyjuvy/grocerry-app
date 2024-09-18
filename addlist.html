@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+    <link rel="stylesheet" href="css/addlist.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="groccery.html">
+                <img src="images/shopping-list.png" alt="Grocery List Logo" class="grocery-logo">
+            </a>
+        </header>
+
+        <div class="content">
+            <img src="images/grocery.gif" alt="Basket Image" class="image">
+            <p>Create a list and add them to your trolley for an easier shopping experience</p>
+            <button class="add-list-btn">
+                <i class="fas fa-plus"></i> <!-- Font Awesome plus icon -->
+            </button>
+            
+
+            <!-- Modal for adding items -->
+            <div id="addItemModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <h2>Add Grocery Item</h2>
+                    <form id="addItemForm">
+                        <label for="productName">Product Name:</label>
+                        <input type="text" id="productName" name="productName" required>
+
+                        <label for="brand">Brand:</label>
+                        <input type="text" id="brand" name="brand">
+
+                        <label for="price">Price (₱):</label>
+                        <input type="number" id="price" name="price" step="0.01" required>
+
+                        <label for="weightVolume">Weight/Volume:</label>
+                        <input type="text" id="weightVolume" name="weightVolume" required>
+
+                        <label for="quantity">Quantity:</label>
+                        <input type="text" id="quantity" name="quantity" required>
+
+                        <label for="store">Store:</label>
+                        <input type="text" id="store" name="store" required>
+
+                        <label for="productImage">Product Image:</label>
+                        <input type="file" id="productImage" accept="image/*">
+
+                        <label for="category">Category:</label>
+                        <select id="category" name="category" required>
+                            <option value="">Select a category</option>
+                            <!-- Options will be populated here -->
+                        </select>
+
+                        <button type="submit" class="submit-btn">Add Item</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script/addlist.js"></script>
+</body>
+</html>

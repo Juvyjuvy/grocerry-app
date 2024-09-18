@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="CodeHim">
+  <title>Grocery List</title>
+  <link rel="stylesheet" href="css/groccery.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="header-left">
+        <!-- Home button -->
+        <a href="addlist.html" class="home-btn">
+          <i class="fas fa-home"></i>
+        </a>
+      </div>
+      <div class="header-title-logo">
+        <h1 class="header-title">Grocery List</h1>
+      </div>
+      <div class="header-right">
+        <a href="cart.html" class="save-list-btn">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-badge">17</span>
+        </a>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Search bar is moved here, below the header but before categories -->
+  <div class="search-bar">
+    <i class="fas fa-search search-icon"></i>
+    <input type="text" id="search-input" placeholder="Search for products...">
+  </div>
+  
+  <!-- Category filter section -->
+  <div class="category-filter">
+    <button class="category-btn" data-category="all">
+      <i class="fas fa-list"></i> <!-- Icon for all -->
+    </button>
+    <button class="category-btn" data-category="fruits">
+      <i class="fas fa-apple-alt"></i> <!-- Icon for fruits -->
+    </button>
+    <button class="category-btn" data-category="vegetables">
+      <i class='fas fa-carrot'></i> <!-- Icon for vegetables -->
+    </button>
+    <button class="category-btn" data-category="meat">
+      <i class="fas fa-drumstick-bite"></i> <!-- Icon for meats -->
+    </button>
+  </div>
+  
+    <div class="product-grid" id="product-grid">
+      <!-- Products will be inserted here dynamically -->
+    </div>
+
+    <!-- Modal for editing items -->
+    <div id="editItemModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Edit Grocery Item</h2>
+        <form id="editItemForm">
+          <label for="productName">Product Name:</label>
+          <input type="text" id="productName" name="productName" required>
+
+          <label for="brand">Brand:</label>
+          <input type="text" id="brand" name="brand">
+
+          <label for="price">Price (₱):</label>
+          <input type="number" id="price" name="price" step="0.01" required>
+
+          <label for="weightVolume">Weight/Volume:</label>
+          <input type="text" id="weightVolume" name="weightVolume" required>
+
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" required>
+
+          <label for="store">Store:</label>
+          <input type="text" id="store" name="store" required>
+
+          <label for="category">Category:</label>
+          <select id="category" name="category">
+            <option value="fruits">Fruits</option>
+            <option value="vegetables">Vegetables</option>
+            <option value="meat">Meat</option>
+          </select>
+
+          <label for="productImage">Product Image:</label>
+          <input type="file" id="productImage" name="productImage" accept="image/*">
+
+          <button type="submit" class="submit-btn">Save Changes</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script src="script/scripts.js"></script>
+</body>
+</html>
